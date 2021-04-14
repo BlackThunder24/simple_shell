@@ -1,0 +1,29 @@
+.\" Manpage.
+.\" To correct errors or typos.
+.TH man_simple_shell  "13 April 2021" "Holberton School 0x16. C - Simple_Shell"
+
+.SH NAME 
+0x16. C - Simple Shell
+
+.SH SYNOPSIS 
+Simple-Shell it is a box where you put commands and these are interpreted by itself
+
+.SH DESCRIPTION 
+A Unix shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. 
+The shell is both an interactive command language and a scripting language, and is used by the operating system to control the execution of the system using shell scripts.
+
+.SH BUGS 
+No known bugs.
+
+.SH ENVIRONMENT 
+HOME contains the user's directory
+USER contains the user's login
+PWD contains current directory
+SHELL contains the name of the connection shell
+PATH contains the list of directories where the commands that the user can execute are located
+HOSTNAME contains the hostname
+HOSTSIZE contains the maximum size of the executed commands contained in the archive file
+PS1 contains the configuration for displaying the prompt
+
+.SH AUTHORS
+Jaime Garcia
