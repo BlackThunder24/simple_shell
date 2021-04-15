@@ -19,7 +19,8 @@ if (strcmp(comand, "cd") == 0)
 if (args[1])
 if (chdir(args[1] != 0))
 printf("Error, %s doesn't exist", args[1])
-else getcwd(PWD, MAX_I);
+else
+getcwd(PWD, MAX_I);
 }
 }
 } while (welcome);
