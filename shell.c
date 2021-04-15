@@ -11,15 +11,17 @@ printf("%s:p", PWD);
 __fpurge(stdin);
 menset(comand, '\0', MAX_I)
 scanf("%[^\n]s", comand);
-if(strlen(comand)>0) {
+if(strlen(comand) >0)
+{
 separaArgs();
-if (strcmp(comand,"cd")==0) {
+if (strcmp(comand,"cd") ==0)
+{
 if (args[1])
-if (chdir(args[1]!=0))
-printf("Error, %s doesn't exist",args[1])
+if (chdir(args[1] !=0))
+printf("Error, %s doesn't exist", args[1])
 else getcwd(PWD, MAX_I);
 }
 }
 }while(welcome);
-return 0;
+return (0);
 }
