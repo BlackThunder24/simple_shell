@@ -1,5 +1,9 @@
 #include "holberton.h"
 
+void separaArgs(void);
+void listaDir(void);
+void comExterno(void);
+
 main(void){
 int welcome = 1;
 getcwd(PWD, MAX_I);
