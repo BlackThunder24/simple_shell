@@ -1,48 +1,25 @@
 #include "holberton.h"
 
-/**
- * main - Program that is simple UNIX command interpreter
- * @argc: argument count
- * @argv: argument vector
- * @env: the environment
- * Return: 0
- */
-int main(int argc, char **argv, char **env)
-{
-char *prompt = "##--->";
-char *line = NULL;
-char **args = NULL;
-int i = 0, status = 0, arg_num = 0;
-static int exit_stat, tally;
-size_t len = 0;
-ssize_t read = 0;
-(void)argc, (void)**argv;
-
-while (TRUE)
-{
-if (isatty(STDIN_FILENO) == 1)
-write(STDOUT_FILENO, prompt, 6);
-
-read = getline(&line, &len, stdin);
-++tally;
-if (special_char(line, read, &exit_stat) == 127)
-continue;
-
-no_nl(line);
-
-args = parser(line);
-
-for (i = 0; args[i]; i++)
-arg_num++;
-
-builtins(line, args, env, &exit_stat);
-
-status = _path(args[0], args, env, &exit_stat);
-
-_execute(status, args, &exit_stat, &tally);
-
-fflush(stdin);
+main(void){
+int welcome=1;
+getcwd(PWD, MAX_I);
+strcpy(PATH,getenv("PATH"));
+strcpy(HOME,getenv("PATH"));
+strcpy(SHELL,PWD);
+do{
+printf("%s:p",PWD);
+__fpurge(stdin);
+menset(comand,'\0',MAX_I)
+scanf("%[^\n]s",comand);
+if(strlen(comand)>0){
+separaArgs();
+if(strcmp(comand,"cd")==0){
+if(args[1])
+if(chdir(args[1]!=0))
+printf("Error, %s doesn't exist",args[1])
+else getcwd(PWD, MAX_I);
 }
-free(line);
-return (0);
+}
+}while(welcome);
+return 0;
 }
