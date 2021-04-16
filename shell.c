@@ -36,7 +36,8 @@ printf("  SHELL=%s\n  PATH=%s\n", SHELL, PATH);
 }
 else if (strcmp(comando, "echo") == 0)
 {
-if(args[1])eco();
+if (args[1])
+eco();
 }
 else if (strcmp(comando, "pwd") == 0)
 printf("%s\n", PWD);
