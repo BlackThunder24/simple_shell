@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 int main(void)
 {
 int continuar = 1;
@@ -25,26 +24,28 @@ else
 getcwd(PWD, MAX_I);
 }
 else if (strcmp(comando, "dir") == 0)
-listaDir(); 
+listaDir();
 else if (strcmp(comando, "clr") == 0)
 strcpy(comando, "clear"), comExterno();
 
-else if (strcmp(comando, "env") == 0){
+else if (strcmp(comando, "env") == 0)
+{
 printf(" Variables de ambiente:\n");
 printf("  HOME=%s\n  PWD=%s\n", HOME, PWD);
 printf("  SHELL=%s\n  PATH=%s\n", SHELL, PATH);
 }
-else if (strcmp(comando, "echo")==0)
+else if (strcmp(comando, "echo") == 0)
 {
 if (args[1]) eco();
 }
 else if (strcmp(comando, "pwd") == 0)
-printf("%s\n",PWD);
+printf("%s\n", PWD);
 else if (strcmp(comando, "exit") == 0)
-continuar =0;
-else comExterno();
+continuar = 0;
+else
+comExterno();
 }
-}while(continuar);
+} while (continuar);
 return(0);
 }
 
