@@ -19,6 +19,7 @@ char PATH[MAX_I];
 char HOME[MAX_I];
 char PWD[MAX_I];
 
+int main(void);
 void separaArgs(void);
 void listaDir(void);
 void comExterno(void); 
