@@ -36,7 +36,7 @@ printf("  SHELL=%s\n  PATH=%s\n", SHELL, PATH);
 }
 else if (strcmp(comando, "echo") == 0)
 {
-if (args[1]) eco();
+if(args[1])eco();
 }
 else if (strcmp(comando, "pwd") == 0)
 printf("%s\n", PWD);
@@ -46,13 +46,14 @@ else
 comExterno();
 }
 } while (continuar);
-return(0);
+return (0);
 }
 
-void comExterno(){
-int pid=0;
+comExterno(void)
+{
+int pid = 0;
 int status;
-pid=fork();
+pid = fork();
 if (pid < 0) printf("Error! no se pudo crear un proceso hijo");
 if (pid == 0){
 status = execvp(comando, args); 
