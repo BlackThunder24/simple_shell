@@ -3,17 +3,17 @@
 
 int main(void)
 {
-int continuar=1;
+int continuar = 1;
 getcwd(PWD, MAX_I);
-strcpy(PATH,getenv("PATH"));
-strcpy(HOME,PWD));
-strcpy(SHELL,PWD);
+strcpy(PATH, getenv("PATH"));
+strcpy(HOME, PWD));
+strcpy(SHELL, PWD);
 do{
-printf("%s>",PWD);
+printf("%s>", PWD);
 __fpurge(stdin);
-memset(comando,'\0',MAX_I);
-scanf("%[^\n]s",comando);
-if(strlen(comando)>0){
+memset(comando, '\0', MAX_I);
+scanf("%[^\n]s", comando);
+if(strlen(comando) > 0){
 separaArgs();
 if(strcmp(comando,"cd")==0)){
 if(args[1])
