@@ -55,9 +55,11 @@ comExterno(void)
 int pid = 0;
 int status;
 pid = fork();
-if (pid < 0) printf("Error! no se pudo crear un proceso hijo");
-if (pid == 0){
-status = execvp(comando, args); 
+if (pid < 0)
+printf("Error! no se pudo crear un proceso hijo");
+if (pid == 0)
+{
+status = execvp(comando, args);
 if (status)
 {
 printf("Error! %s no se reconoce o no se pudo ejecutar\n", comando);
