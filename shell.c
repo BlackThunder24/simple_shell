@@ -40,11 +40,11 @@ if(args[1]) eco();
 else if(strcmp(comando, "pwd") == 0)
 printf("%s\n",PWD);
 else if(strcmp(comando, "exit") == 0)
-continuar =0 ;
+continuar =0;
 else comExterno();
 }
 }while(continuar);
-return 0;
+return (0);
 }
 
 void comExterno(){
