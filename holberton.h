@@ -2,11 +2,13 @@
 #define holberton_h
 
 #include <stdio.h>
-#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 #define MAX_ARGS 13
 #define MAX_I 105
@@ -22,6 +24,6 @@ char PWD[MAX_I];
 int main(void);
 void separaArgs(void);
 void listaDir(void);
-void comExterno(void); 
+void comExterno(void);
 
 #endif
