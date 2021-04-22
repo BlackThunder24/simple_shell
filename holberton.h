@@ -1,29 +1,37 @@
-#ifndef holberton_h
-#define holberton_h
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <dirent.h>
+#include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#include <sys/types.h>
+#include <errno.h>
 
-#define MAX_ARGS 13
-#define MAX_I 105
-
-char comando[MAX_I];
-char args[MAX_ARGS];
-
-char SHELL[MAX_I];
-char PATH[MAX_I];
-char HOME[MAX_I];
-char PWD[MAX_I];
+#define MAX_ARGS 100
+#define MAX_NAME_SIZE 1000
+#define SEPARATORS " ,!?\'\"\n\t"
 
 int main(void);
-void separaArgs(void);
-void listaDir(void);
-void comExterno(void);
+void space(char *line, char **token);
+int execute(char **token, char *var2);
+int validator_line(char *tok[]);
+void free(int sigint);
+
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+char *_strcat(char *dest, char *src);
+int _execvp(char *name, char *argv[]);
+char *_strchr(char *s, char c);
+char *pEnv(char *name);
+void execArgs(char *file, char *argv[]);
+char *_strncpy(char *dest, char *src, int n);
+int compr_avanz(char **tok, char *var2);
+int _env(char *tok[]);
+int _cd(char *tok[]);
+void errors(char __attribute__((unused)) **error);
+extern char **environ;
 
 #endif
